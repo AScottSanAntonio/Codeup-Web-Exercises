@@ -1,0 +1,6 @@
+body {
+	background-image: url(/img/cat.gif);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	
+}

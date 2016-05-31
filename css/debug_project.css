@@ -1,0 +1,43 @@
+h1 {
+	font-size: 2em;
+}
+
+section {
+	width: 7em;
+	height: 40em;
+	background-color: #999f8e;
+	float: left;
+	position: absolute;
+	padding: 1em;
+	left: 0em;
+	top: 0em;
+	
+}
+
+#menu {
+	margin-bottom: 1em;
+	
+}
+
+#content {
+	width: 30em;
+	height: 40em;
+	padding: 1em;
+	vertical-align: top;
+	float: left;
+	background-color: #d2d8c7;
+	position: absolute;
+	top: 0em;
+	left: 7em;
+}
+
+#MC {
+	text-align: center;
+	margin-top: 13em;
+	margin-left: -39em;
+}
+
+#CC {
+	text-align: center;
+}
+

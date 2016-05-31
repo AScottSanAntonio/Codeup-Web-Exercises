@@ -1,0 +1,31 @@
+h1, h2 {
+	text-decoration: underline;
+	color: White;
+
+}
+body {
+	font-family: fantasy;
+	
+	background-image: url("img/cat.gif") no-repeat;
+	background-size: 100%;
+	background-attachment: fixed;
+	background-position: center-top;
+
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+ul {
+	list-style: square;
+}
+th {
+		font-weight: bold;
+}
+
+a {
+	color:Orange;
+}
+th {
+	font-weight: bold;
+	text-decoration: underline;
+}

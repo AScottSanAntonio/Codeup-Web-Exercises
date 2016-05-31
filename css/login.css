@@ -1,0 +1,64 @@
+
+
+#login_button {
+    margin-left: 8%;
+    
+    top: 32%;
+}
+
+h1 {
+    text-align: center;
+    border: 3px solid white;
+    width: 20%;
+    height: 20%;
+    padding: 10px;
+    background-color: #808080;
+    margin:right 50%;
+    color: white;
+    font-size: 180%;
+    
+}
+
+@media only screen and (max-width: 560px) {
+    h1 {
+        font-size: 110%;
+        top: .5em;
+        left: .5em;
+        height: 85px;
+        width: 23%;
+    }
+
+    #login_button {
+        top: 19%;
+        left: -2%;
+
+    }
+}
+
+body{
+    padding: 50px;
+    background-image: url(img/greyscale.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: center-top;
+
+}
+.modal-dialog {
+    width: 300px;
+}
+.modal-footer {
+    height: 70px;
+    margin: 0;
+}
+.modal-footer .btn {
+    font-weight: bold;
+}
+.modal-footer .progress {
+    display: none;
+    height: 32px;
+    margin: 0;
+}
+.input-group-addon {
+    color: #fff;
+    background: #3276B1;
+}
