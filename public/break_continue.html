@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Break/contine</title>
+</head>
+<body>
+	<script>
+		
+		var Random = Math.floor((Math.random()*50)+1);
+
+		while (Random % 2 ===0){
+			var Random = Math.floor((Math.random()*50)+1);
+		}
+			console.log("Skipping : " + Random);
+
+		for (var i = 1; i < 50; i++){
+			
+			if (i % 2 === 0) {
+				continue;
+			}
+			if (Random === i) {
+				console.log("Skipped this: " + i);
+			} else {
+				console.log("Odd number: " + i);
+			}
+
+		}
+	</script>
+
+</body>
+</html>
