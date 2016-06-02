@@ -1,0 +1,22 @@
+#background{
+	background-image: url("img/sand-background.jpg");
+	background-size: 100%;
+}
+
+h1{
+	text-align: center;
+	font-size: 150%;
+	font-family: Papyrus;
+	font-weight: bold;
+	position: absolute;
+	top: 13em;
+	left: 20em;
+}
+#banner{
+	background-image: url("img/JoinTheRealm_sigil.png");
+	z-index: 1;
+	position: absolute;
+	top: 5em;
+	left: 5em;
+
+}
