@@ -4,26 +4,30 @@
 
 var message;
 
-for (var a = 1; a <= 10; a++)
-{
-	message = '';
+function counting(message){
 
-	for (var b = 1; b <= a; b++)
+	for (var a = 1; a <= 10; a++)
 	{
+		message = '';
 
-		if (a == 10)
+		for (var b = 1; b <= a; b++)
 		{
+
+			if (a == 10)
+			{
 	
-			message = message + 0;
-		}
-		else
-		{
+				message = message + 0;
+			}
+			else
+			{
 	
-			message = message + a
+				message = message + a
+			}
 		}
+		console.log(message);
 	}
-	console.log(message);
 }
+counting(message);
 
 //exercise 2//
 

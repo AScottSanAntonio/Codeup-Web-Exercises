@@ -14,5 +14,7 @@
 			
 			
 			function isOdd(numberToTest) {
-				(numberToTest % 2 === 1) ? console.log("Number was odd") : console.log("Number was even")
+				(numberToTest % 2 === 1) ? console.log("Number was odd") : console.log("Number was even");
 			}
+
+			isOdd(random);
