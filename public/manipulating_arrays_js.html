@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Manipulating Arrays JS</title>
+	</head>
+	<body>
+		<script>
+
+		//cite variables//
+		//find a way to shorten the arrays listed//
+		//find a way to shorten console logs//
+
+			(function(){
+			    
+			
+			    
+			    var planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'];
+			
+			    function logPlanets() {
+			        console.log('Here is the list of planets:');
+			        console.log(planets);
+			    }
+			    		//adding the sun to the start of the array//
+
+				    console.log('HERE COMES THE SUN.');
+				    planets.unshift("The Sun");
+				    logPlanets();
+
+				    	//adding pluto to the end of the array//
+				
+				    console.log('Hey, Pluto is a planet again!.');
+				    planets.push("Pluto");
+				    logPlanets();
+
+				    	//removing the sun from the start of the array//
+				
+				    console.log('Going supernova in 5... 4... 3.. 2... 1...');
+				    	planets.shift();
+				    logPlanets();
+
+				    	//removing Pluto from the end of the array//
+				
+				    console.log('Pluto is no longer a planet.');
+				    planets.pop();
+				    logPlanets();
+
+				    	//checking the indexed location of Earth in the array//
+				
+				    console.log('Indexing Earth.');
+				    var indexOfEarth = planets.indexOf("Earth");
+
+				    	//removing Mars from its position in the array//
+				
+				    console.log('Using super-weapon to obliterate Mars....');
+				    var planetAfterEarth = planets.splice(indexOfEarth + 1, 1);
+				    logPlanets();
+
+				    	//re-adding Mars to its previous location in the array//
+				
+				    console.log("It's ok, we built a better Mars.");
+				    planets.splice(indexOfEarth + 1, 0, planetAfterEarth);
+				    logPlanets();
+					
+				    	//restructuring the array//
+
+				    console.log("Some cosmic-related tom-foolery is occuring.");
+				    planets.reverse();
+				    logPlanets();
+
+				    	//returing array to normal//
+				
+				    console.log("Let's fix this...");
+				    planets.sort();
+				    logPlanets();
+			})();
+
+
+		</script>
+	</body>
+</html>
