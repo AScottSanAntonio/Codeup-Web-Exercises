@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HEB</title>
+</head>
+	<body>
+		<script>
+	
+
+		// var customers = [];
+
+
+		do {
+			var customer = {
+				name: "",
+				products: [],
+				productPrices: [],
+				final: 0,
+
+			};	
+			var customerName = prompt("What is your name?");
+			customer.name = customerName;
+			console.log(customer.name);
+				if (customerName){
+					var productName = prompt("What products did you have?");
+							customer.products.push(productName);
+								console.log(customer.products)
+					}
+				if (productName){
+					var productPrice = parseFloat(prompt("How much did " + customer.products + " cost?"));
+							customer.productPrices.push(productPrice);
+								console.log(Number(productPrice));
+				}
+
+				var total = {
+					priceTotal: function(){
+						var final = customer.final;
+
+						for (var i = 0; i < customer.productPrices.length; i++){ 
+							console.log("Indexes: " + customer.productPrices.length);
+							final = final + customer.productPrices[i];
+							console.log("The current price is " + customer.productPrices[i]);
+							console.log(final);
+						}
+							return final;
+					}
+				}		
+				
+				alert("So, " + customer.name + " it seems you have purchased " + customer.products + ", that will be " + customer.productPrices + " dollars in total, unless you had more items?")
+				var more = confirm("Are there any additional products?")
+					if (more){
+						var productPrice2 = parseFloat(prompt("How much did it cost?"))
+								customer.productPrices.push(productPrice2);
+
+				var final1 = total.priceTotal();
+
+				alert("So, " + customer.name + " it seems you have purchased " + customer.products + ", that will be " + final1 + " dollars in total, unless you had more items?")
+
+
+					} else {
+						alert("Fantastic, your total is ")
+					}
+
+
+			} while (customerName == "");
+
+
+
+			
+			
+		
+
+
+
+
+
+//			console.log('heb question');
+//			var cameronCost = 180;
+//			var ryanCost = 250;
+//			var georgeCost = 320;
+//
+//			var discountCostRequirement = 200;
+//			var discount = 0.35;
+//
+//			var cameronCostWithDiscount;
+//			if (cameronCost > discountCostRequirement) {
+//			    cameronCostWithDiscount = cameronCost - (//cameronCost * discount);
+//			} else {
+//			    cameronCostWithDiscount = cameronCost;
+//			}
+//			console.log('Cameron: ' + cameronCost + ', ' + //cameronCostWithDiscount);
+//
+//			var ryanCostWithDiscount;
+//			if (ryanCost > discountCostRequirement) {
+//			    ryanCostWithDiscount = ryanCost - (ryanCost * discount);
+//			} else {
+//			    ryanCostWithDiscount = ryanCost;
+//			}
+//			console.log('Ryan: ' + ryanCost + ', ' + ryanCostWithDiscount);
+//
+//			var georgeCostWithDiscount;
+//			if (georgeCost > discountCostRequirement) {
+//			    georgeCostWithDiscount = georgeCost - (georgeCost * discount);
+//			} else {
+//			    georgeCostWithDiscount = georgeCost;
+//			}
+//			console.log('Ryan: ' + georgeCost + ', ' + georgeCostWithDiscount);
+//		</script>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>derp</title>
+	</head>
+		<body>
+
+		<script>
+			var classes = []
+
+			var person =  []
+
+			var grades = []
+
+			var message = ''
+
+				
+			do { 
+				message = prompt("Please enter students name: ");
+
+			} while (message == null){
+					if (message) {
+						person.push(message);
+						console.log(person);
+						message = prompt("Which class would you like to enter a grade for?");
+							if (message){
+								classes.push(message);
+								console.log(classes);
+			do{
+			message = prompt("Please enter grade for student.");
+				if (message){
+					grades.push(Number(message));
+					console.log(grades);
+					}
+						
+
+			} while (message);
+				console.log(grades);
+
+				} 
+				
+
+				} else {
+					alert("Please insert a valid name.");
+				}
+			}
+
+			
+			
+			var sum = {
+				gradeavg: function(avg){
+					var array = grades;
+					var total = 0;
+					for (i = 0; i < grades.length; i++){
+						 total = (total + grades[i]);
+					}
+					
+				return total/grades.length
+
+					
+
+
+					
+				}
+			
+
+
+			}
+			
+			console.log(sum.gradeavg());
+
+			var endgrade = sum.gradeavg();
+
+			if (endgrade > 80){
+			alert("good job")
+			} else
+			alert("GET BETTER")
+
+		</script>
+	</body>
+</html>
