@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>calc</title>
+		<link rel="stylesheet" href="css/calc.css">
+	</head>
+	<body>
+		<div class="calculator container">
+		<div class="row">
+			<h2>Calculator</h2>
+		</div>
+	    <div class="row">
+	        <div class="outputBox" contenteditable></div>
+	        <div class="buttonContainer">
+	        <div class="row">
+	            <div class="col-xs-2">
+	                <button class="numberButton" data-value="7" type="button" data-value="7">7</button>
+	                <button class="numberButton" data-value="8">8</button>
+	                <button class="numberButton" data-value="9">9</button>
+	                <button class="operationButton" data-value="X">X</button>
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-xs-2">
+	                <button class="numberButton" data-value="4">4</button>
+	                <button class="numberButton" data-value="5">5</button>
+	                <button class="numberButton" data-value="6">6</button>
+	                <button class="operationButton" data-value="/">/</button>
+	            </div>
+	        </div>
+	        <div class="row">
+	           <div class="col-xs-2">
+	                <button class="numberButton" data-value="1">1</button>
+	                <button class="numberButton" data-value="2">2</button>
+	                <button class="numberButton" data-value="3">3</button>
+	                <button class="operationButton" data-value="-">-</button>
+	            </div>
+	        </div>
+	            <div class="row">
+	                <div class="col-xs-2">
+	                    <button class="numberButton" class="zeroButton">0</button>
+	                    <button class="operationButton" data-value="=">=</button>
+	                    <button class="operationButton" data-value="+">+</button>
+	                    <button data-value="C">C</button>
+	      			</div>
+	            </div>
+	        </div>
+	    </div>
+		</div>
+		<textarea id="field1" readonly rows="1" cols="5">
+		</textarea>
+		<textarea id="field2" readonly rows="1" cols="1">
+		</textarea>
+		<textarea id="field3" readonly rows="1" cols="5">
+		</textarea>
+		<textarea id="field4" readonly rows="1" cols="12">
+		</textarea>
+		<script>
+		'use strict'
+
+
+		//listener1 = field1
+
+		var listener1 = function(click) {
+			var field1 =  document.getElementById("field1");
+				field1.value = this.getAttribute('data-value') + field1.value
+		} 	
+		var select = document.getElementsByClassName('numberButton')
+		console.log(select);
+		
+		for (var i = 0; i < select.length; i++) {
+			select[i].addEventListener('click', listener1, false);
+			}
+
+		//listener2 = field2
+
+			var operatorListener = function(click2) {
+			var field2 =  document.getElementById("field2");
+			var field1 =  document.getElementById("field1");
+				field2.value = this.getAttribute('data-value') + field1.value
+				field1.removeEventListener('click', listener1, false);
+		} 	
+		var select2 = document.getElementsByClassName('operationButton')
+		console.log(select2);
+		
+		for (var i = 0; i < select2.length; i++) {
+			select2[i].addEventListener('click', operatorListener, false);
+			}
+
+
+		//listener3 = field3
+
+		
+
+
+
+		</script>
+	</body>
+</html>

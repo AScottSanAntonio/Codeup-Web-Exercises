@@ -1,0 +1,47 @@
+.clear
+{
+    clear:both;
+    z-index: 2
+}
+
+button
+{
+    padding:5px 10px 5px 10px;
+    margin:5px;
+    z-index: 2
+}
+
+button.zeroButton
+{
+    width:78px;
+    z-index: 2
+}
+
+.spacer
+{
+    margin-left:46px;
+    z-index: 2
+}
+#field1
+{
+	position: absolute;
+	top: 6em;
+	left: .5em;
+	z-index: 2
+}
+#field2
+{
+	position: absolute;
+	top: 6em;
+	left: 5.5em;
+	z-index: 2
+}
+#field3
+{
+	position: absolute;
+	top: 6em;
+	left: 8.5em;
+	z-index: 2
+}
+
+
