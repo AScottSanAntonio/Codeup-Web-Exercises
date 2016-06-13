@@ -1,47 +1,63 @@
-.clear
-{
-    clear:both;
-    z-index: 2
-}
+.calcForm {
+	background-color: grey;
+	width: 185px;
+	height: 258px;
+	border: 2px solid black;
+	z-index: 2;
+	border-radius: 10px;
+	margin: 20px;
+	
 
-button
-{
-    padding:5px 10px 5px 10px;
-    margin:5px;
-    z-index: 2
 }
+.calcRow > input {
+	
+	width: 30px;
+	height: 40px;
+	border: 2px solid black;
+	z-index: 2;
+	margin: 5px;
+	border-radius: 5px;
+}
+#display {
+	border: 2px solid black;
+	padding: 4px;
+	margin: 10px;
+	border-radius: 4px;
+	height: 25px;
 
-button.zeroButton
-{
-    width:78px;
-    z-index: 2
-}
 
-.spacer
-{
-    margin-left:46px;
-    z-index: 2
 }
-#field1
-{
+#equals {
+	background-color: #3399ff;
 	position: absolute;
-	top: 6em;
-	left: .5em;
-	z-index: 2
+	top: 15.25em;
+	left: 10.5em;
+	width: 45px;
+	height: 25px;
 }
-#field2
-{
+#clear {
+	background-color: salmon;
+	width: 45px;
+	height: 25px;
 	position: absolute;
-	top: 6em;
-	left: 5.5em;
-	z-index: 2
-}
-#field3
-{
-	position: absolute;
-	top: 6em;
-	left: 8.5em;
-	z-index: 2
-}
+	top: 17em;
+	left: 10.5em;
 
+}
+#multiply{
+	background-color: #ffcccc;
+}
+#divide {
+	float: left;
+	background-color: #ffcccc;
+}
+#decimal {
+	background-color: goldenrod;
+}
+#addition {
+	background-color: goldenrod;
+}
+#subtraction {
+	background-color: goldenrod;
+}
 
