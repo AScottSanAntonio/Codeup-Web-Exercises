@@ -6,11 +6,28 @@
 		#map {
 			height: 500px;
 		}
+      #Pizza {
+        display: none;
+        width: 120px;
+        height: 100px;
+        float: left;
+        background-size: cover
+      }
+      #pizzaicon {
+        display: none;
+        width: 50px;
+        height: 50px;
+      }
+      
 		</style>
-</head>
+    </head>
+
 	
-<body>
-	<div id="map"></div>
+    <body>
+    <img id="pizzaicon" src="/css/img/pizzaicon.png">
+
+	 <div id="map"></div>
+  <img id = "Pizza" src="css/img/pizza.jpg" alt="Pizza">
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVibIrK6gT5L_yYb1V_87jfIaDrTBDfig">
 	</script>
 	<script type="text/javascript">
@@ -48,16 +65,33 @@
        // Show an error message with the status if our request fails
        alert("Geocoding was not successful - STATUS: " + status);
    }
+
+
 });
         var grimaldis = { lat: 29.654055, lng: -98.447929 };
 
-// Add the marker to our existing map
-var marker = new google.maps.Marker({
-    position: grimaldis,
-    map: map
-});
+		// Add the marker to our existing map
+    var pizzaicon2 = "/css/img/pizzaicon2.png";
+		var marker = new google.maps.Marker({
+    	position: grimaldis,
+    	map: map,
+      icon: pizzaicon2
+	});
+    
+    var pizza = document.getElementById("Pizza");
+    var wrap = document.createElement('div');
+    pizza.style.display = 'inline';
+    wrap.appendChild(pizza);
 
-    })();
+
+		var infowindow = new google.maps.InfoWindow({
+    	content: "Grimaldis Brick Oven Pizzaria- " + wrap.innerHTML + "Delicious coal fired pizza<br>" + "-To-go and Dine in available.<br>" + "-Large wine selection.<br>" +"-Hours: 11:00 am- 11:00 pm" 
+	});
+
+		// Open the window using our map and marker
+		infowindow.open(map, marker);
+
+    	})();
     </script>
 </body>
 		
