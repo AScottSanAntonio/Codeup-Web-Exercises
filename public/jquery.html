@@ -5,6 +5,14 @@
 </head>
 <body>
 <p id = "para">Hello</p>
+<h1 id="derp">derp</h1>
+
+<ul>
+	<li>derp</li>
+	<li>derp</li>
+	<li>derp</li>
+</ul>
+<textarea id="keyfield" ></textarea>
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script>
@@ -15,9 +23,30 @@
 			$('.codeup')
 			//tag selector
 			$('p')
-			//multiple selector
+			//combination selector
 			$('article.clickbait p')
-		});
+			//multiple selector
+			$('p, span, div')
+
+			$( "#derp" ).click( function() {
+				$( "#derp" ).css("background-color" , 'red');
+
+			$('ul').css('font-size', '20px');
+
+			var contents = $('#derp').html();
+            alert(contents);
+
+
+            $( "#para" ).dblclick( function() {
+            	$( "#para" ).css( 'font-size' , '18px');
+
+
+
+
+            });
+
+        });
+	});
 	</script>
 </body>
 </html>
