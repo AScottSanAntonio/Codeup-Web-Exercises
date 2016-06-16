@@ -8,13 +8,43 @@
         		height: 250px
 
         	}
+        	#space {
+        		width: 50px;
+        		height: 50px;
+        	}
         	</style>
     </head>
     <body>
+    	<button type="button" id = "btn1">TIME FOR FACTS</button>
         <h1>Konami Code</h1>
         <div id = "pic"></div>
 
         <input class="konamiField" type="textfield">
+        <dl>10 Cool Science Facts</dl>
+        	<dd class="invis"> - The Mantis Shrimp's arm allows it to project a punch strong enough that it can generate light and heat.</dd>
+        	<dd class="invis"> - If you stand still at the equator you will be moving around 1000 mph</dd>
+        	<dd class="invis"> - If you dropped a marshmallow into a neutron star it would impact the surface with the energy of a 3-megaton nuclear warhead</dd>
+
+
+        	<div id="space"></div>
+        	<h3>Grand Caynon</h3>
+        	<ul>
+        		<li id = "herp">behold my child, BOLD FONT</li>
+        		<li></li>
+        		<li></li>
+        	</ul>
+        	<h3>YellowStone</h3>
+        	<ul>
+        		<li id = "herp">behold my child, BOLD FONT</li>
+        		<li></li>
+        		<li></li>
+        	</ul>
+        	<h3>Big Bend</h3>
+        	<ul>
+        		<li id = "herp">behold my child, BOLD FONT</li>
+        		<li></li>
+        		<li></li>
+        	</ul>
 
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
@@ -35,14 +65,33 @@
                 	if (konami[10] == event.keyCode){
 
                 		alert("BEHOLD, A CAT")
+                		$("herp").css("font-weight", "bold")
                 		
                 		$("#pic").css("background-image", "url(css/img/cat.gif)", "background-size", "100%")
 
-                		index = 0;
-                	}
+                		$("button").click(function(){
+                			$("dd").toggleClass<"invis";
+                		});
+                		$("ul").each(function(index, element){
+                			$(element).children().first().css("font-weight", "bold")
+                		});
+                		$("li").click(function() {
+                			$(this).parent().toggleClass('invis')
+                		});
+                		}
 
+                		$("ul").click(function(event) {
+                			
+                			$("ul").css("background-color", "red")
+                			
+                			console.log(event)
+                		});
+                		index = 0;
 
                 	});
+
+
+                	
                 
 
                 

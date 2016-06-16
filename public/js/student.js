@@ -1,8 +1,5 @@
 'use strict';
 
-document.getElementById("add-grade").disabled = true;
-document.getElementById("calculate-average").disabled = true;
-
 var student = {
     awesomeGrade: 80,
     name: null,
@@ -24,11 +21,50 @@ var student = {
     isAwesome: function () {
         return this.calculateAverage() > this.awesomeGrade;
     }
-}
-//use listeners to disable the addSubject and calculateAverage buttons on page start up.
-//buttons enabled after hitting save
-//buttons move the values entered for grades up so that they can be calculated in an average
-//hidden values are changed to be visible via a listener
+};
 
-//listener for save-name needs to allow for the save button to push the entered values in the 'What's your name?' field to the saved names catagory.
-//
+var saveButton = document.getElementById('save-name');
+var addAndContinueButton = document.getElementById('add-grade');
+var addAndAverageButton = document.getElementById('calculate-average');
+
+function saveName() {
+    var studentName = document.getElementById('name');
+    student.name = studentName.value;
+    addAndContinueButton.removeAttribute('disabled');
+    addAndAverageButton.removeAttribute('disabled');
+    document.getElementById('student-name').innerText = student.name;
+}
+
+function noGavin() {
+    var subjectName = document.getElementById('subject');
+    var subjectGrade = document.getElementById('grade');
+
+    student.addSubject(subjectName.value, parseInt(subjectGrade.value));
+
+    var tableBody = document.getElementById('grades');
+    tableBody.innerHTML = '<tr><td>' + subjectName.value + '</td><td>' + subjectGrade.value + '</td></tr>' + tableBody.innerHTML;
+
+    subjectName.value = '';
+    subjectGrade.value = '';
+}
+
+function noAbbreviationsGavin() {
+    noGavin();
+    var average = student.calculateAverage();
+    document.getElementById('student-average').innerText = average;
+
+    if (student.isAwesome()) {
+        document.getElementById('student-awesome').removeAttribute('class');
+        document.getElementById('student-practice').setAttribute('class', 'hidden');
+    } else {
+        document.getElementById('student-practice').removeAttribute('class');
+        document.getElementById('student-awesome').setAttribute('class', 'hidden');
+    }
+
+    addAndContinueButton.setAttribute('disabled', true);
+    addAndAverageButton.setAttribute('disabled', true);
+}
+
+saveButton.addEventListener('click', saveName);
+addAndContinueButton.addEventListener('click', noGavin);
+addAndAverageButton.addEventListener('click', noAbbreviationsGavin);
