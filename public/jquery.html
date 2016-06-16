@@ -27,6 +27,13 @@
 			$('article.clickbait p')
 			//multiple selector
 			$('p, span, div')
+			$('#derp').click(function() {
+        	$('#para').slideToggle();
+    	});
+    	$('#derp').click(function() {
+        	$('#para').slideToggle();
+    	});
+	});
 
 			$( "#derp" ).click( function() {
 				$( "#derp" ).css("background-color" , 'red');
@@ -34,7 +41,7 @@
 			$('ul').css('font-size', '20px');
 
 			var contents = $('#derp').html();
-            alert(contents);
+           
 
 
             $( "#para" ).dblclick( function() {
@@ -46,7 +53,7 @@
             });
 
         });
-	});
+	
 	</script>
 </body>
 </html>
