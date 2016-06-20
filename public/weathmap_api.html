@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	</head>	
+
+	<body>
+	<script>
+		$.get("http://api.openweathermap.org/data/2.5/weather", {
+    		APPID: "467fce2fbe4d967cacd8c8886374905a",
+    		q:     "San Antonio, TX",
+    		units: "imperial"
+		}).done(function(data) {
+    		console.log(data);
+		});
+</script>
+</body>
+</html>

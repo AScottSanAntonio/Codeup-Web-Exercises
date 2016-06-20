@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title></title>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src ="js/moment.js"></script>
+	<style>
+		body {
+			background-image: url("css/img/clouds.jpg");
+			background-size: 100%;
+			background-repeat: none;
+			background-attachment: fixed;
+
+		}
+		#day1{
+			height: 100px;
+			width: 120px;
+			margin: 10px;
+			background-color: #696969;
+			float: left;
+			border: 2px solid black;
+			position: absolute;
+			top: 40px;
+			left: 5px;
+		}
+		#day2{
+			height: 100px;
+			width: 120px;
+			margin: 10px;
+			background-color: #696969;
+			float: left;
+			border: 2px solid black;
+			position: absolute;
+			top: 40px;
+			left: 130px;
+		}
+		#day3{
+			height: 100px;
+			width: 120px;
+			margin: 10px;
+			background-color: #696969;
+			float: left;
+			border: 2px solid black;
+			position: absolute;
+			top: 40px;
+			left: 255px;
+		}
+		#container {
+			width: 405px;
+			height: 170px;
+			border: 3px solid black;
+			background-color: #A3A3A3;
+			position: absolute;	
+			top: 40px;
+			left: 40px;
+		}
+		#heading {
+			font-size: 20px;
+			text-align: center;
+		}
+		div {
+			font-weight: bold;
+		}
+		</style>
+	</head>	
+
+	<body>
+	<div id="container">
+		<h1 id ="heading">3 Day Forecast</h1>
+		<div id ="day1"></div>
+		<div id ="day2"></div>
+		<div id ="day3"></div>
+	</div>
+	<script>
+		$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+    		APPID: "1ae910b78ef373978aa1e3d0612ab2d0",
+    		q: "San Antonio",
+    		units: "imperial",
+    		cnt: "3"
+    	}).done(function(weatherData) {
+    		console.log(weatherData);
+    		var cityName = document.getElementById("heading")
+
+    			cityName.innerHTML = weatherData.city.name + " - three day forecast"
+
+    			$("#day1").html(moment(weatherData.list[0].dt * 1000).format('MMMM Do YYYY')  + " " + weatherData.list[0].temp.max + '° high <br> ' + weatherData.list[0].temp.min + '° low <br> ' + weatherData.list[0].speed + ' mph <br> ' + weatherData.list[0].humidity + '% humidity');
+    			$("#day2").html((moment(weatherData.list[1].dt * 1000).format('MMMM Do YYYY')) + " " + weatherData.list[1].temp.max + '° high <br> ' + weatherData.list[1].temp.min + '° low <br> ' + weatherData.list[1].speed + ' mph <br> ' + weatherData.list[1].humidity + '% humidity')
+    			$("#day3").html((moment(weatherData.list[2].dt * 1000).format('MMMM Do YYYY')) + " " + weatherData.list[2].temp.max + '° high <br> ' + weatherData.list[2].temp.min + '° low <br> ' + weatherData.list[2].speed + ' mph <br> ' + weatherData.list[2].humidity + '% humidity')
+    			
+    		
+		});
+
+</script>
+</body>
+</html>
