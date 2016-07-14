@@ -22,9 +22,13 @@ function pageController () {
 	<title>Pong</title>
 </head>
 <body>
+		<h1 id = "display"> 
+			<?= $counter; ?>
+		</h1>
+		<h2>PONG</h2>
 
-<button id = "btnU">
-				<a href = "ping.php?counter=<?= $counter +1 ?>&data=miss ">
+			<button id = "btnU">
+				<a href = "ping.php?counter=<?= $counter +1 ?>">
 					Hit
 				</a>
 			</button>
