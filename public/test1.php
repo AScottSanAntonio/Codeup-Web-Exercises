@@ -1,4 +1,7 @@
 <?php  
+
+//List of arrays
+
 $nouns = ['Druid','Rogue','Barbarian','Cleric','Ranger','Shaman','Wizard','Gunslinger','Necromancer','Summoner'];
 
 $adjectives = ['Lawful Good','Lawful Neutral','Lawful Evil','True Good','True Neutral','True Evil','Chaotic Good','Chaotic Neutral','Chaotic Evil','Chaotic Stupid'];
@@ -9,7 +12,12 @@ $backstory = ['Lived in a crime ridden town, eventually leading to "sword for hi
 
 $statpoints = ['18','17','16','15','14','13','12','11','10'];
 
-	 
+//Randomly generated starting gold value//
+
+$gold = rand(20,2000);
+
+	 //Random value seletor for each array//
+
 	$races = array_rand($origin, 1);
 	$story = array_rand($backstory, 1); 
 	$characters = array_rand($nouns, 1);
@@ -24,91 +32,65 @@ $statpoints = ['18','17','16','15','14','13','12','11','10'];
 
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-#space{
-	height: 10px;
-}
-#races {
-		font-size: 14px;
-		text-align: center;
-	}
-	#display {
-		width: 250px;
-		height: 220px;
-		border: 2px solid white;
-		padding: 2px;
-		margin: 2px;
-		color: white;
-		position: absolute;
-		top: 130px;
-		left: 140px;
-	}
-		#display2 {
-		width: 250px;
-		height: 220px;
-		border: 2px solid white;
-		padding: 2px;
-		margin: 2px;
-		color: white;
-		position: absolute;
-		top: 130px;
-		left: 400px;
-	}
-	#align {
-		text-align: center;
-		font-size: 20px;
-	}
-	#char {
-		text-align: center;
-		font-size: 20px;
-	}
-	#backstory {
-		text-align: center;
+	<head>
+		<link rel= "stylesheet" href = "css/dnd.css">
+		<title>DnD Character Generator</title>
+	</head>
+	<body>
+		<!--Top of Page Buttons-->
+		<button id = "create">Save Character</button>
+		<button id = "logout">Logout</button>
+		<button id = "login">Login</button>
+		<button id = "btnGen" onClick = "refreshPage()">Roll the dice</button>
 
-	}
-	#background {
-		background-image: url("css/img/tome3.jpg");
-		width: 800px;
-		height: 800px;
-		background-repeat: no-repeat;
-		background-size: 100%
+		<h1>DnD Character Creation</h1>
+		<h4 id = "charinfo">Character Information</h4>
+		<div id = "welcome">
+			<h3 id = "welcomemessage">Welcome to the lands of Mordus!</h3>
+				<!--Campaign Rules / How the site works-->
+			<p id = "rules">
+				To the left is the basic information regarding your new character, including the following: <br>
+			<br>
+				-Alignment: Based on the 3X3 Alignment chart <br>
+			<br>
+				-Race: Selected from ten random races <br>
+			<br>
+				-Class: Selected from ten random classes <br>
+			<br>
+				-Backstory: Selected from more than twenty backstories <br>
+			<br>
+				-Stats: Stats allocated at random from values ranging from ten to eighteen <br>
+			<br>
+				All of these are randomized, if you have an issue with a part of the character and want to edit a few of the given values but keep the rest please speak to the DM before transferring to a paper copy.
+			</p>
 
-	}
-	#story {
-		font-size: 14px;
-		margin: 4px;
-	}
-	h1 {
-		text-align: center;
-	}
-	#btnGen {
-		font-size: 20px;
-		position: absolute;
-		top: 25px;
-		left: 140px; 
-	}
-	
-
-</style>
-	<title>DnD Character Generator</title>
-</head>
-<body>
-	<button id = "btnGen" onClick = "refreshPage()">Roll the dice</button>
-	<h1>DnD Character Creation</h1>
+		<img id = "derp" src = "css/img/dndupdate.jpeg"></img>
+	</div>
+	<!--Character Info Box / LeftBound-->
+	<div id = "border">
+	<!--Progress Bar-->
+		<div id = "progress">
+			<div id = "tenPercent">
+				<h5>10% complete</h5>
+				<div id = "circle">
+					<div id = "progressline">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--PHP values echo'd on page-->
 		<div id = "background">
 			<div id = "display">
-				
 				<p id = "align">You are a <?= $adjectives[$alignments]; ?> <?= $origin[$races]; ?> <?= $nouns[$characters]; ?>
-					
 				</p>
-		
 				<h2 id = "backstory">Backstory</h2>
 				<p id = "story">
-				<?= $backstory[$story]; ?>
+					<?= $backstory[$story]; ?>
 				</p>
 			</div>
 		</div>
+	</div>
+		<!--Stat Bars-->
 		<div id = "display2">
 		<ul id = "statpage">
 			<li>STR - ( <?= $statpoints[$stat1]; ?> ) </li>
@@ -124,15 +106,19 @@ $statpoints = ['18','17','16','15','14','13','12','11','10'];
 			<li>CHA - ( <?= $statpoints[$stat6]; ?> ) </li>
 			<div id = "space"></div>
 		</ul>
+		<ul id = "miscinfo">
+			<li>Gold</li>
+		</ul>
+		<p id = "goldamount">
+			<?= $gold; ?>
+		</p>
 		</div>
 
-
 		<script>
+		//JS window refresh
 			function refreshPage(){
     		window.location.reload();
 			} 
 		</script>
-
-
-</body>
+	</body>
 </html>

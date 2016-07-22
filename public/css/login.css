@@ -1,14 +1,14 @@
 
 
 #login_button {
-    margin-left: 8%;
-    
+    margin-left: 6.5%;
+    opacity: .5;
     top: 32%;
 }
 
 h1 {
     text-align: center;
-    border: 3px solid white;
+    border: 1px solid white;
     width: 20%;
     height: 20%;
     padding: 10px;
@@ -16,6 +16,7 @@ h1 {
     margin:right 50%;
     color: white;
     font-size: 180%;
+    opacity: .5;
     
 }
 

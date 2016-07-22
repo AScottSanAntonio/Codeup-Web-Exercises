@@ -28,7 +28,7 @@ $(document).ready(function(){
     				.blur()
 					.delay(1600)
 					.fadeIn(function(){
-						title.text("Log in is successful");
+						title.text("Authorized!");
 						button.attr("data-dismiss", "modal");
 					});
 		}
