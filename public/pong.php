@@ -17,23 +17,23 @@ include 'functions.php';
 			}
 				h2 
 			{
-				color: #ff00ff;
+				color: black;
 
 				
 			}
 			h1
 			{
-				color: #ff00ff;
+				color: black;
 				
 			}
 			#derp
 			{
 				position: absolute;
 				top: 70px;
-				left: 220px;
+				left: 180px;
 				width: 240px;
 				height: 240px;
-				border: 1px solid #ff00ff;
+				border: 1px solid black;
 				text-align: center;
 				border-radius: 240px;
 				background-color: #660066;
@@ -43,10 +43,10 @@ include 'functions.php';
 			{
 				position: absolute;
 				top: 180px;
-				left: 160px;
+				left: 140px;
 				width: 180px;
 				height: 180px;
-				border: 1px solid #ff00ff;
+				border: 1px solid black;
 				text-align: center;
 				border-radius: 180px;
 				background-color: #4d004d;
@@ -56,35 +56,35 @@ include 'functions.php';
 			{
 				position: absolute;
 				top: 320px;
-				left: 160px;
+				left: 150px;
 				width: 80px;
 				height: 80px;
-				border: 1px solid #ff00ff;
+				border: 1px solid black;
 				text-align: center;
 				border-radius: 80px;
-				background-color: #1a001a;
+				background-color: #340034;
 				z-index: 3;
 			}
 			#derp4
 			{
 				position: absolute;
 				top: 390px;
-				left: 165px;
+				left: 160px;
 				width: 30px;
 				height: 30px;
-				border: 1px solid #ff00ff;
+				border: 1px solid black;
 				text-align: center;
 				border-radius: 30px;
-				background-color: #4f1260;
+				background-color: #1a001a;
 				z-index: 2;
 			}#derp5
 			{
 				position: absolute;
 				top: 420px;
-				left: 170px;
+				left: 165px;
 				width: 10px;
 				height: 10px;
-				border: 1px solid #ff00ff;
+				border: 1px solid black;
 				text-align: center;
 				border-radius: 10px;
 				background-color: #0d0620;

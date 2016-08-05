@@ -1,5 +1,7 @@
 <?php  
 
+//include auth.php;
+
 //List of arrays
 
 $nouns = ['Druid','Rogue','Barbarian','Cleric','Ranger','Shaman','Wizard','Gunslinger','Necromancer','Summoner'];

@@ -19,17 +19,17 @@ include 'functions.php';
 			}
 			h2 
 			{
-				color: purple;
+				color: #ff00ff;
 			}
 			h1
 			{
-				color: purple;
+				color: #ff00ff;
 			}
 			#derp
 			{
 				position: absolute;
 				top: 70px;
-				left: 220px;
+				left: 180px;
 				width: 240px;
 				height: 240px;
 				border: 1px solid #ff00ff;
@@ -42,7 +42,7 @@ include 'functions.php';
 			{
 				position: absolute;
 				top: 180px;
-				left: 160px;
+				left: 140px;
 				width: 180px;
 				height: 180px;
 				border: 1px solid #ff00ff;
@@ -55,7 +55,7 @@ include 'functions.php';
 			{
 				position: absolute;
 				top: 320px;
-				left: 160px;
+				left: 150px;
 				width: 80px;
 				height: 80px;
 				border: 1px solid #ff00ff;
@@ -68,7 +68,7 @@ include 'functions.php';
 			{
 				position: absolute;
 				top: 390px;
-				left: 165px;
+				left: 160px;
 				width: 30px;
 				height: 30px;
 				border: 1px solid #ff00ff;
@@ -80,7 +80,7 @@ include 'functions.php';
 			{
 				position: absolute;
 				top: 420px;
-				left: 170px;
+				left: 165px;
 				width: 10px;
 				height: 10px;
 				border: 1px solid #ff00ff;
